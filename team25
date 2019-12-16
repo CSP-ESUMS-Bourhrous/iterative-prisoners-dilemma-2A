@@ -1,0 +1,20 @@
+####
+# Eac h team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'E25'
+strategy_name = 'Good Strategy'
+strategy_description = 'Betray until they collude and collude until they betray'
+
+
+def move(my_history, their_history, my_score, their_score):
+    if len(their_history) != 0:
+        if their_history[-1:] == 'c':
+            return 'c'
+        else:
+            return 'b'
+
